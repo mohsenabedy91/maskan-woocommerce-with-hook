@@ -211,8 +211,8 @@ function BankMaskan_Gateway_Load() {
 				curl_setopt($curl, CURLOPT_POST, 1);
 				curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($parameters));
 				curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-//				curl_setopt($curl, CURLOPT_URL, "https://fcp.shaparak.ir/NvcService/Api/v2/PayRequest");
-				curl_setopt($curl, CURLOPT_URL, "http://79.174.161.132:8181/NvcService/Api/v2/PayRequest");
+				curl_setopt($curl, CURLOPT_URL, "https://fcp.shaparak.ir/NvcService/Api/v2/PayRequest");
+// 				curl_setopt($curl, CURLOPT_URL, "http://79.174.161.132:8181/NvcService/Api/v2/PayRequest");
 				curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-Type: application/json", "Accept: application/json"));
 				$result = curl_exec($curl);
 				curl_close($curl);
@@ -299,8 +299,8 @@ function BankMaskan_Gateway_Load() {
 							$curl = curl_init();
 							curl_setopt($curl, CURLOPT_POST, 1);
 							curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($parameters));
-//							curl_setopt($curl, CURLOPT_URL, "https://fcp.shaparak.ir/NvcService/Api/v2/Confirm");
-							curl_setopt($curl, CURLOPT_URL, "http://79.174.161.132:8181/NvcService/Api/v2/Confirm");
+							curl_setopt($curl, CURLOPT_URL, "https://fcp.shaparak.ir/NvcService/Api/v2/Confirm");
+// 							curl_setopt($curl, CURLOPT_URL, "http://79.174.161.132:8181/NvcService/Api/v2/Confirm");
 							curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 							curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-Type: application/json", "Accept: application/json"));
 							$result = curl_exec($curl);
